@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<div class='container text-center'>
+    <h2>Password Generator</h2><br>
+
+    <form action="{% url 'password' %}"> Długość hasła
+        <select name="length">
+            <option value="6">6 znaków</option>
+            <option value="7">7 znaków</option>
+            <option value="8">8 znaków</option>
+            <option value="9">9 znaków</option>
+            <option value="10">10 znaków</option>
+            <option value="11">11 znaków</option>
+            <option value="12" selected=selected>12 znaków</option>
+            <option value="13">13 znaków</option>
+            <option value="14">14 znaków</option>
+            <option value="15">15 znaków</option>
+            <option value="16">16 znaków</option>
+        </select>
+        <br>
+        <input type="checkbox" name="uppercase" id='uppercase'><label for='uppercase'> Wielkie litery</label>
+        <br>
+        <input type="checkbox" name="numbers" id='numbers'><label for='numbers'> Cyfry</label>
+        <br>
+        <input type="checkbox" name="special" id='spec'><label for='spec'> Znaki specjalne</label>
+        <br>
+        <input type="submit" value="Generuj" class='btn btn-primary'>
+    </form>
+</div>
